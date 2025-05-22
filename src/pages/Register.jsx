@@ -30,7 +30,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post("http://localhost:3004/api/user/signup", {
+      await axios.post("https://job-backend-api-production.up.railway.app/api/user/signup", {
         email,
         password,
       });

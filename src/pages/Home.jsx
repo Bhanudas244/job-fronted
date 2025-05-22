@@ -24,7 +24,7 @@ const Home = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await axios.get("http://localhost:3004/api/job", {
+      const res = await axios.get("https://job-backend-api-production.up.railway.app/api/job", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setJobs(res?.data?.data || []);

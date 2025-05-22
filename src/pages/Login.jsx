@@ -24,7 +24,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3004/api/user/signin", {
+      const response = await axios.post("https://job-backend-api-production.up.railway.app/api/user/signin", {
         email,
         password,
       });

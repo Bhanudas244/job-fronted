@@ -27,7 +27,7 @@ const JobForm = ({ editMode = false }) => {
         setError("");
         const token = localStorage.getItem("token");
         try {
-          const response = await axios.get(`http://localhost:3004/api/job/${id}`, {
+          const response = await axios.get(`https://job-backend-api-production.up.railway.app/api/job/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -59,7 +59,7 @@ const JobForm = ({ editMode = false }) => {
     try {
       if (editMode) {
         await axios.put(
-          `http://localhost:3004/api/job/${id}`,
+          `https://job-backend-api-production.up.railway.app/api/job/${id}`,
           {
             title,
             description,
@@ -72,7 +72,7 @@ const JobForm = ({ editMode = false }) => {
         );
       } else {
         await axios.post(
-          "http://localhost:3004/api/job",
+          "https://job-backend-api-production.up.railway.app/api/job",
           {
             title,
             description,

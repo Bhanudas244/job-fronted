@@ -11,7 +11,7 @@ const JobCard = ({ job, onRefresh }) => {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.delete(`http://localhost:3004/api/job/${job._id}`, {
+      await axios.delete(`https://job-backend-api-production.up.railway.app/api/job/${job._id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
